@@ -5,6 +5,9 @@
     --right-bg-color: rgba(43, 43, 43, 0.8);
     --left-btn-hover-color: rgba(87, 84, 236, 1);
     --right-btn-hover-color: rgba(28, 122, 28, 1);
+    --hover-width: 75%;
+    --other-width: 25%;
+    --speed: 1000ms;
 }
 
 
@@ -72,7 +75,7 @@ h1 {
 
 .split.left {
     left: 0;
-    background:  url('https://images.unsplash.com/photo-1607853202273-797f1c22a38e?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background:  url('https://github.com/bradtraversy/50projects50days/blob/master/split-landing-page/ps.jpg?raw=true');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -87,7 +90,7 @@ h1 {
 
 .split.right {
     right: 0;
-    background: url('https://images.unsplash.com/photo-1621259182978-fbf93132d53d?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background: url('https://github.com/bradtraversy/50projects50days/blob/master/split-landing-page/xbox.jpg?raw=true');
     background-repeat: no-repeat;
     background-size: cover;
 } 
@@ -98,4 +101,34 @@ h1 {
     width: 100%;
     height: 100%;
     background-color: var(--right-bg-color);
+}
+
+.split.right, .split.left, .split.right::before, .split.left::before {
+    transition: all var(--speed) ease-in-out;
+}
+
+.hover-left .left{
+    width: var(--hover-width);
+}
+.hover-left .right{
+    width: var(--other-width);
+}
+
+.hover-right .left{
+    width: var(--other-width);
+}
+.hover-right .right{
+    width: var(--hover-width);
+}
+
+@media(max-width: 800px) {
+    h1 {
+        font-size: 2rem;
+        top: 30%;
+    }
+
+    .btn {
+        padding: 1.2rem;
+        width: 12rem;
+    }
 }
