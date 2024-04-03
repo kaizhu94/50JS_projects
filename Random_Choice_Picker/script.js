@@ -47,7 +47,7 @@ function randomSelect() {
         setTimeout(() => {
             const randomTag = pickRandomTag();
 
-            highlightTag(randomTag);
+            highlightTag(randomTag)
         })
     }, times * 100);
 }
@@ -62,5 +62,5 @@ function highlightTag(tag) {
 }
 
 function unHighlightTag(tag) {
-    tag.classList.remove('hightlight');
+    tag.classList.remove('highlight');
 }
