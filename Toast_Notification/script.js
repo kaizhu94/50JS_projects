@@ -7,7 +7,6 @@ const messages = [
     'Message Three',
     'Message Four',
 ]
-
 const types = ['info', 'success', 'error']
 
 function createNotification(message = null, type = null) {
